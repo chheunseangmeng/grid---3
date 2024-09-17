@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.container{
+    display: grid;
+    background: #b56576;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1.5fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-areas: 
+    'nav nav nav nav nav nav' 
+    'header header header header header header'
+    'sidebar main main main main banner1'
+    'sidebar main main main main banner1'
+    'sidebar main main main main banner2'
+    'sidebar main main main main banner2'
+    'left left center center right right';
+}
+.container> .nav,.header,.sidebar, .banner1, .banner2, .left, .right, .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}
+.nav{
+    grid-area: nav;
+    background: #eaac8b;
+}
+.header{
+    grid-area: header;
+    padding: 20px;
+    background: #e56b6f;
+}
+.sidebar{
+    grid-area: sidebar;
+    padding: 20px;
+    background: #955361;
+}
+.main{
+    gap: 20px;
+    grid-area: main;
+    background:#6d597a;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 4fr 4fr;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card4 card5 card6';
+    margin: 0 15px 0 15px;
+}
+.main> div{
+    background: #4a3c53;
+}
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+.card5{
+    grid-area: card5;
+}
+.card6{
+    grid-area: card6;
+}
+p{
+    color: #fff;
+    background: #000;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 183px;
+    width: 60px;
+    padding: 10px;
+    border-top-left-radius: 20px;
+}
+.banner1{
+    grid-area: banner1;
+    padding: 10px;
+    background: #905c68;
+}
+.banner2{
+    grid-area: banner2;
+    padding: 10px;
+    background: #794d56;
+}
+.left{
+    grid-area: left;
+    padding: 10px;
+    background: #355070;
+}
+.center{
+    grid-area: center;
+    padding: 10px;
+    background: #293e58;
+}
+.right{
+    grid-area: right;
+    padding: 10px;
+    background: #1b293b;
+}
